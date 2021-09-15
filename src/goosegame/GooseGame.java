@@ -392,8 +392,18 @@ class DiceRollPanel extends JPanel {
 	}
 
 	private static ImageIcon getDiceImageIcon(int number) {
-		String filepath = DICE_ICONS_DIRECTORY + "dice_" + number + ".png";
-		//System.out.println("Filepath: " + filepath);
+		String wdir = System.getProperty("user.dir");
+		String[] dentries = wdir.split("/");
+		String leaf = dentries[dentries.length-1];
+		String filepath;
+		if (leaf.equals("src")) {
+			filepath = "goosegame/images/";
+		}
+		else {
+			filepath = "src/goosegame/images/";
+		}
+		//String filepath = DICE_ICONS_DIRECTORY + "dice_" + number + ".png";
+		filepath = filepath + "dice_" + number + ".png";
 		BufferedImage img = null;
 		try {
  			img = ImageIO.read(new File(filepath));

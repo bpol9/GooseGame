@@ -18,8 +18,19 @@ class Pawn extends JLabel{
 
 	this.color = color;
 	this.square = square;
+	String wdir = System.getProperty("user.dir");
+	String[] dentries = wdir.split("/");
+	String leaf = dentries[dentries.length-1];
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
-	String filepath = PAWN_ICONS_DIRECTORY + Board.getColorName(color) + "_pawn.png";
+	String filepath;
+	if (leaf.equals("src")) {
+		filepath = "goosegame/images/";
+	}
+	else {
+		filepath = "src/goosegame/images/";
+	}
+	//String filepath = PAWN_ICONS_DIRECTORY + Board.getColorName(color) + "_pawn.png";
+	filepath = filepath + Board.getColorName(color) + "_pawn.png";
 	BufferedImage img = null;
 	if (filepath != null) {
 		try {
