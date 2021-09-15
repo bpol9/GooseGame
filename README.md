@@ -1,5 +1,5 @@
 # GooseGame
-A simple and fun board game in Java. Read about the rules [here](https://www.mastersofgames.com/rules/goose-game-rules.htm).
+A simple and fun board game in Java. Read the rules [here](https://www.mastersofgames.com/rules/goose-game-rules.htm).
 
 ## Prerequisites
 JDK 11 or higher (previous versions probably work but not tested).
@@ -16,7 +16,7 @@ cd ..
 java goosegame.GooseGame goosegame/SquareLabels.txt
 ```
 
-You can alse use this as a [Apache NetBeans](https://netbeans.apache.org/) project instead of using the command line.
+You can also use this as a [Apache NetBeans](https://netbeans.apache.org/) project instead of using the command line.
 (File->Open Project and then select the repo folder).
 
 ## Screenshot
